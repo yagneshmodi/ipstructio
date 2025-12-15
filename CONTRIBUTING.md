@@ -76,7 +76,7 @@ General steps:
 3. Create a new branch:
 
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feat/your-feature-name
    ```
 4. Install dependencies
 5. Start the development server
