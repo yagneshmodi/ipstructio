@@ -13,6 +13,7 @@ function run(name, cmd) {
 
 console.log("🏗️ Running pre-commit checks...\n");
 
+run("Formatting files", "npx lint-staged");
 run("Formatting check", "npm run format:check");
 run("Lint check", "npm run lint");
 run("Type check", "npm run typecheck");
