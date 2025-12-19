@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IPStructio
 
-## Getting Started
+A modern and extensible IP Address Management (IPAM) and Network Automation platform designed to support multi-branch enterprise environments. The system documents network inventory, maps devices, documentation, topology, and integrates with advanced vendor-specific features such as Alcatel-Lucent UNP dynamic VLAN assignment.
 
-First, run the development server:
+### Project Goals
+- Provide a simple yet powerful IPAM solution
+- Maintain a single source of truth for IPs, subnets, VLANs, and devices
+- Enable clean documentation and auditable network changes
+- Support Alcatel-Lucent UNP VLAN automation
+- Offer a modern dashboard and search experience
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### Subnet Management
+- [ ] Create, edit, and delete IPv4 subnets
+- [ ] Automatic calculation of:
+  - [ ] Network address
+  - [ ] Broadcast address
+  - [ ] Usable host range
+  - [ ] Subnet utilization tracking
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### IP Address Management
+- [ ] Track IP address status as free, assigned, or reserved.
+- [ ] Assign metadata to devices which includes hostname, description, device type and MAC address.
+- [ ] Visual indicators for IP usage, conflicts, and reservations.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Device Inventory
+- [ ] Centralized inventory for all network devices
+- [ ] Store:
+  - [ ] Device name
+  - [ ] Device type
+  - [ ] MAC address
+  - [ ] Assigned IPs
+  - [ ] Vendor / manufacturer
+  - [ ] Physical location
+- Designed for infrastructure such as:
+  - [ ] Switches
+  - [ ] Routers
+  - [ ] Security cameras
+  - [ ] NAS devices
+  - [ ] Access points
+  - [ ] IoT devices
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### VLAN & Layer-2 Tracking
+- [ ] Create and manage VLANs
+- [ ] Map VLANs to subnets
+- [ ] Visual tagging and color coding
 
-## Learn More
+#### Search & Filters
+- [ ] Global search across:
+  - [ ] IP addresses
+  - [ ] Hostnames
+  - [ ] MAC addresses
+  - [ ] Subnets
+- [ ] Fast filtering for quick troubleshooting and lookup
 
-To learn more about Next.js, take a look at the following resources:
+#### Dashboard
+- [ ] Total subnets
+- [ ] IP usage statistics
+- [ ] Device counts by type
+- [ ] Recent changes
+- [ ] Alerts for high-priority issues
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Audit Logs
+- [ ] Full change tracking for:
+  - [ ] IP modifications
+  - [ ] Device edits
+  - [ ] Subnet updates
+- [ ] Audit entries include:
+  - [ ] User who made the change
+  - [ ] Timestamp
+  - [ ] Change details (before/after)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### User Roles & Authentication
+- [ ] Role-based access control:
+  - [ ] Admin – Full access
+  - [ ] Editor – Modify data
+  - [ ] Read-only – View only
+- [ ] Secure authentication system
 
-## Deploy on Vercel
+#### Bulk Import & Export
+- [ ] Import data using CSV:
+  - [ ] Subnets
+  - [ ] IP addresses
+  - [ ] Devices
+- [ ] Export current data for:
+  - [ ] Backups
+  - [ ] Reporting
+  - [ ] External Documentation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Notes & Documentation
+- [ ] Switch configuration guides
+- [ ] Network design notes
+- [ ] Operational documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### [ ] UNP Configuration (Alcatel-Lucent)
+- [ ] Generate UNP configuration snippets for network devices
+- [ ] Support mapping:
+  - [ ] Full MAC addresses
+  - [ ] MAC OUIs
+- [ ] Use cases:
+  - [ ] Dynamic VLAN assignment
+  - [ ] Device-based network segmentation
+- [ ] Export UNP rules in a switch-ready format
+
+----
+### Architecture
+- **Frontend**: NextJs
+- **Backend**: NextJS & Supabase
+- **Database**: PostgreSQL
